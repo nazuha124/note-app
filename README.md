@@ -45,26 +45,3 @@ Dibangun menggunakan **Next.js** (Frontend), **Go Fiber** (Backend), dan **Postg
 
 ---
 
-## 🧩 Struktur Proyek
-
-note-app/
-├── backend/
-│ ├── main.go
-│ ├── routes/
-│ │ ├── auth.go
-│ │ └── notes.go
-│ ├── middleware/
-│ │ └── jwtmw.go
-│ └── database/
-│ └── db.go
-│
-├── frontend/
-│ ├── app/
-│ │ ├── login/page.tsx
-│ │ ├── register/page.tsx
-│ │ └── notes/page.tsx
-│ ├── lib/api.ts
-│ └── ...
-│
-├── docker-compose.yml
-└── README.md
