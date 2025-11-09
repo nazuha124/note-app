@@ -40,7 +40,7 @@ Dibangun menggunakan **Next.js** (Frontend), **Go Fiber** (Backend), dan **Postg
 |--------|------------|--------|
 | **Frontend** | Next.js (App Router), TailwindCSS, Axios | UI & komunikasi ke API |
 | **Backend** | Go Fiber, JWT, bcrypt, imaging | REST API, autentikasi, upload gambar |
-| **Database** | PostgreSQL | Penyimpanan data relasional |
+| **Database** | PostgreSQL | Penyimpanan data |
 | **Deployment** | Docker Compose | Menjalankan semua service terintegrasi |
 
 ---
