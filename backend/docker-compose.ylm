@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: zizya22
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+  backend:
+    build: .
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: zizya22
+      DB_NAME: postgres
+      JWT_SECRET: secret123
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - ./uploads:/app/uploads
+    depends_on:
+      - db
+
+volumes:
+  db_data:
