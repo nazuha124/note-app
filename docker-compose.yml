@@ -4,8 +4,8 @@ services:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: zizya22
+      POSTGRES_USER: ---
+      POSTGRES_PASSWORD: ---
       POSTGRES_DB: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -19,14 +19,14 @@ services:
       - db
     environment:
       DB_HOST: db
-      DB_PORT: 5432
-      DB_USER: postgres
-      DB_PASSWORD: zizya22
-      DB_NAME: postgres
-      JWT_SECRET: secret123
+      DB_PORT: --
+      DB_USER: ---
+      DB_PASSWORD: ---
+      DB_NAME: ---
+      JWT_SECRET: ---
       PORT: 8081
     ports:
-      - "8081:8081"
+      - "---:---"
     volumes:
       - ./backend/uploads:/app/uploads
 
